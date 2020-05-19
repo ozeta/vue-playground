@@ -25,13 +25,23 @@
 export default {
   data() {
     return {
-      drawer: true
+      // drawer: null
     };
   },
   computed: {
-    get_drawer_status() {
-      return this.$store.getters.drawer_status
+drawer: {
+      get() {
+        return this.$store.getters.drawer_status; 
+      },
+      set() {
+      },
     }
+
   }
+
+
+
+
+
 };
 </script>

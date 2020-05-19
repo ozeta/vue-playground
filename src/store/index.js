@@ -7,13 +7,13 @@ export const store = new Vuex.Store({
     drawer_status: true
   },
   mutations: {
-    switch_drawer_status(state) {
+    mutate_drawer_status(state) {
       state.drawer_status = !state.drawer_status
     }
   },
   actions: {
-    switch_drawer_status(context) {
-      context.commit('switch_drawer_status')
+    action_drawer_status(context) {
+      context.commit('mutate_drawer_status')
     }
   },
   getters: {

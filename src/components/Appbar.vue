@@ -1,10 +1,10 @@
 <template>
   <nav>
     <v-app-bar app color="primary">
-      <v-app-bar-nav-icon @click="switch_drawer_status"></v-app-bar-nav-icon>
+      <v-app-bar-nav-icon @click="action_drawer_status"></v-app-bar-nav-icon>
       <v-toolbar-title class="text-uppercase">
         <span class="font-weight-light">Todo</span>
-        <span>Ninja</span> 
+        <span>Ninja</span>
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-btn text>
@@ -18,14 +18,18 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import { mapActions, mapState } from "vuex";
 export default {
   data() {
     return {};
   },
-
-  computed: mapState({
-    drawer: state => state.drawer_status
-  })
+  methods: {
+    ...mapActions(["action_drawer_status"])
+  },
+  computed: {
+    ...mapState({
+      drawer: state => state.drawer_status
+    })
+  }
 };
 </script>

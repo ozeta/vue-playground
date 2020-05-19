@@ -30,6 +30,9 @@ https://medium.com/js-dojo/vuex-and-vue-bread-and-butter-4519a21e95ce
 # state/data get set
 https://stackoverflow.com/questions/48388834/vuetify-navigation-drawer-works-once-then-stops
 
+# router external link
+https://stackoverflow.com/questions/50633001/vuejs-vue-router-linking-an-external-website
+
 ## Project setup
 ```
 npm install

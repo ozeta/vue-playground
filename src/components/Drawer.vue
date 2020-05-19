@@ -29,19 +29,12 @@ export default {
     };
   },
   computed: {
-drawer: {
+    drawer: {
       get() {
-        return this.$store.getters.drawer_status; 
+        return this.$store.getters.drawer_status;
       },
-      set() {
-      },
+      set() {}
     }
-
   }
-
-
-
-
-
 };
 </script>

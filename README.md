@@ -27,6 +27,8 @@ https://github.com/iamshaunjp/vuetify-playlist/tree/lesson-2
 
 https://medium.com/js-dojo/vuex-and-vue-bread-and-butter-4519a21e95ce
 
+# state/data get set
+https://stackoverflow.com/questions/48388834/vuetify-navigation-drawer-works-once-then-stops
 
 ## Project setup
 ```

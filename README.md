@@ -1,0 +1,52 @@
+# setup
+
+```bash
+node -v
+npm -v
+mkdir vue-npm && cd vue-npm
+npm init -y
+npm install vue --save
+npm install -g @vue/cli @vue/cli-service-global
+vue create vuetify-test (requires manual actions)
+cd vuetify-test
+vue add vuetify
+```
+
+# execute 
+
+```bash
+npm run serve
+```
+
+# tutorial
+
+https://www.youtube.com/watch?v=FbEW3xAmhKs&list=PL4cUxeGkcC9g0MQZfHwKcuB0Yswgb3gA5&index=2
+https://github.com/iamshaunjp/vuetify-playlist/tree/lesson-2
+
+## vuex
+
+https://medium.com/js-dojo/vuex-and-vue-bread-and-butter-4519a21e95ce
+
+
+## Project setup
+```
+npm install
+```
+
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
+
+### Compiles and minifies for production
+```
+npm run build
+```
+
+### Lints and fixes files
+```
+npm run lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).

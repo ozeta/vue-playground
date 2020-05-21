@@ -33,6 +33,9 @@ https://stackoverflow.com/questions/48388834/vuetify-navigation-drawer-works-onc
 # router external link
 https://stackoverflow.com/questions/50633001/vuejs-vue-router-linking-an-external-website
 
+# Vuex modules | fetching data with axios
+https://www.youtube.com/watch?v=hsmffuEzasM
+
 ## Project setup
 ```
 npm install

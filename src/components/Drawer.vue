@@ -1,9 +1,10 @@
 <template>
-  <v-navigation-drawer v-model="drawer" app>
+  <!-- <v-navigation-drawer v-model="drawer_status" app> -->
+  <v-navigation-drawer :value="drawer_status" app>
     <v-list-item>
       <v-list-item-content>
         <v-list-item-title class="title">Application</v-list-item-title>
-        <v-list-item-subtitle>subtext</v-list-item-subtitle>
+        <v-list-item-subtitle>Drawer {{ drawer_status }}</v-list-item-subtitle>
       </v-list-item-content>
     </v-list-item>
 
@@ -24,23 +25,23 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
+
 export default {
   data() {
     return {
         items: [
           { title: 'Google', icon: 'mdi-magnify', href: 'https://google.com' },
           { title: 'Home', icon: 'mdi-image', link: '/' },
+          { title: 'Users', icon: 'mdi-user', link: '/users' },
           { title: 'About', icon: 'mdi-help-box', link: '/about' },
         ]
     };
   },
   computed: {
-    drawer: {
-      get() {
-        return this.$store.getters.drawer_status;
-      },
-      set() {}
-    }
+    ...mapGetters([
+      'drawer_status'
+    ])
   }
 };
 </script>

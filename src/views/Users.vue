@@ -11,29 +11,34 @@
           </v-card>
         </v-col>
 
+        <v-col v-for="(user) in users" :key="user.id" cols="12">
+          <v-card>
+            <div class="d-flex flex-no-wrap justify-space-between">
+              <div>
+                <v-card-title class="headline">{{ user.name }}</v-card-title>
+                <v-card-subtitle>{{ user.email }}</v-card-subtitle>
+              </div>
+            </div>
+          </v-card>
+        </v-col>
       </v-row>
     </v-container>
   </div>
 </template>
 
 <script>
-import { mapState,mapGetters } from "vuex";
-
+// import { mapGetters } from "vuex";
+import { mapState } from "vuex";
+// import { mapActions } from 'vuex'
 export default {
   name: "Users",
   components: {},
   data() {
     return {};
   },
-  computed: {
-    ...mapState({
-      
-    })
-  },
-  created: {
-    ...mapGetters({
+  computed:mapState({
       users: state => state.users
     })
-  }
+  
 };
 </script>

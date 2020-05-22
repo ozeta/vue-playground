@@ -107,6 +107,7 @@ const users_module = {
         .get("https://jsonplaceholder.typicode.com/users")
         .then(res => {
           context.commit('SET_USERS', res.data)
+          console.log("%cdata received", "font-weight: bold;color:white; background: blue")
           console.log(res.data)
         })
         .catch(error => console.log(error))

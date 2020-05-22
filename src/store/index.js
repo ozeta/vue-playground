@@ -1,10 +1,10 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import users from './modules/users'
+import users_module from './modules/users'
 Vue.use(Vuex)
 export const store = new Vuex.Store({
   modules: {
-    users
+    users_module
   },
   state: {
     items: [
@@ -35,7 +35,7 @@ export const store = new Vuex.Store({
   },
   getters: {
     drawer_status(state) {
-      return state.drawer_status;
+      return state.drawer_status
     }
   }
 

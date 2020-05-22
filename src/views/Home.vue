@@ -40,17 +40,17 @@
 </template>
 
 <script>
-import { mapState } from "vuex";
+import { mapState } from "vuex"
 
 export default {
   name: "Home",
   components: {},
   data() {
-    return {};
+    return {}
   },
   computed: mapState({
     drawer: state => state.drawer_status,
     items: state => state.items
   })
-};
+}
 </script>

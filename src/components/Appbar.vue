@@ -9,19 +9,17 @@
       <v-spacer></v-spacer>
       <v-btn text>
         <span>Sign out</span>
-        <v-btn icon>
           <v-icon>mdi-exit-to-app</v-icon>
-        </v-btn>
       </v-btn>
     </v-app-bar>
   </nav>
 </template>
 
 <script>
-import { mapActions, mapState } from "vuex";
+import { mapActions, mapState } from "vuex"
 export default {
   data() {
-    return {};
+    return {}
   },
   methods: {
     ...mapActions(["action_drawer_status"])
@@ -31,5 +29,5 @@ export default {
       drawer: state => state.drawer_status
     })
   }
-};
+}
 </script>

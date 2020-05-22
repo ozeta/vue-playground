@@ -33,15 +33,15 @@ export default {
         items: [
           { title: 'Google', icon: 'mdi-magnify', href: 'https://google.com' },
           { title: 'Home', icon: 'mdi-image', link: '/' },
-          { title: 'Users', icon: 'mdi-user', link: '/users' },
+          { title: 'Users', icon: 'mdi-account-multiple', link: '/users' },
           { title: 'About', icon: 'mdi-help-box', link: '/about' },
         ]
-    };
+    }
   },
   computed: {
     ...mapGetters([
       'drawer_status'
     ])
   }
-};
+}
 </script>

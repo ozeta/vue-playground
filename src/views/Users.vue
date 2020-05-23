@@ -8,7 +8,7 @@
             <v-card-title class="headline">Users</v-card-title>
             <v-card-subtitle>*</v-card-subtitle>
             <v-card-actions>
-              <v-btn text  @click="action_load_users">Load users</v-btn>
+              <v-btn text @click="action_load_users">Load users</v-btn>
             </v-card-actions>
           </v-card>
         </v-col>
@@ -18,7 +18,7 @@
             <div class="d-flex flex-no-wrap justify-space-between">
               <div>
                 <v-card-title class="headline">{{ user.name }}</v-card-title>
-                <v-card-subtitle>{{ user.email }}</v-card-subtitle>
+                <v-card-subtitle>{{ user.id }} @ {{ user.email }}</v-card-subtitle>
                 <v-card-text class="text--primary">
                   {{ user.address.city }}
                   ({{ user.address.zipcode }}) -
@@ -35,23 +35,30 @@
 </template>
 
 <script>
-// import { mapGetters } from "vuex"
-import { mapState } from "vuex"
-import { mapActions } from 'vuex'
+import { mapGetters } from "vuex";
+import { mapState } from "vuex";
+import { mapActions } from "vuex";
 export default {
   name: "Users",
   components: {},
   data() {
-    return {}
+    return {};
   },
   methods: {
-
     ...mapActions({
-      action_load_users: 'users_module/action_load_users'
+      action_load_users: "users_module/action_load_users"
     })
   },
-  computed: mapState({
-    users: state => state.users_module.users
-  })
-}
+  created() {
+    this.$store.dispatch("users_module/action_load_users");
+  },
+  computed: {
+    ...mapGetters({
+      // getter_filter_users: "users_module/filtered_users"
+    }),
+    ...mapState({
+      users: state => state.users_module.users
+    })
+  }
+};
 </script>

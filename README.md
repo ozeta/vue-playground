@@ -36,6 +36,9 @@ https://stackoverflow.com/questions/50633001/vuejs-vue-router-linking-an-externa
 # Vuex modules | fetching data with axios
 https://www.youtube.com/watch?v=hsmffuEzasM
 
+# vuex axios state
+https://glebbahmutov.com/blog/vue-vuex-rest-todomvx/ 
+
 ## Project setup
 ```
 npm install

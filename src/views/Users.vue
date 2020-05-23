@@ -9,6 +9,9 @@
             <v-card-subtitle>*</v-card-subtitle>
             <v-card-actions>
               <v-btn text @click="action_load_users">Load users</v-btn>
+              <v-btn absolute dark fab bottom right color="pink" link :to="item.link">
+                <v-icon>mdi-plus</v-icon>
+              </v-btn>
             </v-card-actions>
           </v-card>
         </v-col>
@@ -42,7 +45,11 @@ export default {
   name: "Users",
   components: {},
   data() {
-    return {};
+    return {
+      item: {
+        link: '/new_user'
+      }
+    };
   },
   methods: {
     ...mapActions({

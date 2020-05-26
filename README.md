@@ -39,6 +39,9 @@ https://www.youtube.com/watch?v=hsmffuEzasM
 # vuex axios state
 https://glebbahmutov.com/blog/vue-vuex-rest-todomvx/ 
 
+# drawer bug
+https://github.com/vuetifyjs/vuetify/issues/1263
+
 ## Project setup
 ```
 npm install

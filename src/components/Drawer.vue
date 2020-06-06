@@ -1,6 +1,6 @@
 <template>
   <!-- <v-navigation-drawer v-model="drawer_status" app> -->
-  <v-navigation-drawer :value="drawer_status" app>
+  <v-navigation-drawer :value="drawer_status" app stateless>
     <v-list-item>
       <v-list-item-content>
         <v-list-item-title class="title">Application</v-list-item-title>
@@ -25,23 +25,32 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
+import { mapGetters, mapActions } from "vuex";
+import ClickOutside from "vue-click-outside";
 
 export default {
+  name: "appDrawer",
+  directives: {
+    ClickOutside
+  },
+
+  computed: {
+    ...mapGetters(["drawer_status"])
+  },
+  methods: {
+    ...mapActions({
+      action_hide_drawer_status: "action_hide_drawer_status"
+    })
+  },
   data() {
     return {
-        items: [
-          { title: 'Google', icon: 'mdi-magnify', href: 'https://google.com' },
-          { title: 'Home', icon: 'mdi-image', link: '/' },
-          { title: 'Users', icon: 'mdi-account-multiple', link: '/users' },
-          { title: 'About', icon: 'mdi-help-box', link: '/about' },
-        ]
-    }
-  },
-  computed: {
-    ...mapGetters([
-      'drawer_status'
-    ])
+      items: [
+        { title: "Google", icon: "mdi-magnify", href: "https://google.com" },
+        { title: "Home", icon: "mdi-image", link: "/" },
+        { title: "Users", icon: "mdi-account-multiple", link: "/users" },
+        { title: "About", icon: "mdi-help-box", link: "/about" }
+      ]
+    };
   }
-}
+};
 </script>

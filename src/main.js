@@ -9,6 +9,9 @@ Vue.config.productionTip = false
 new Vue({
   router,
   vuetify,
+  beforeCreate() {
+    // store.dispatch('communityModule/initialize', comms);
+},
   store,
   render: h => h(App)
 }).$mount('#app')

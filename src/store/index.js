@@ -21,20 +21,36 @@ export const store = new Vuex.Store({
         artist: 'Ellie Goulding',
       },
     ],
-    drawer_status: true
+    drawer_status: false
   },
   mutations: {
     mutate_drawer_status(state) {
+      console.log("mutate_drawer_status")
       state.drawer_status = !state.drawer_status
-    }
+    },
+    mutate_show_drawer_status(state, show_drawer) {
+      console.log("shutting off drawer")
+      state.drawer_status = show_drawer
+    },
   },
   actions: {
     action_drawer_status(context) {
+      console.log("action_drawer_status")
       context.commit('mutate_drawer_status')
-    }
+    },
+
+    action_hide_drawer_status(context) {
+      console.log("action_drawer_status")
+      context.commit('mutate_show_drawer_status', false)
+    },
+    action_show_drawer_status({commit}, flag) {
+      console.log("action_drawer_status")
+      commit('mutate_show_drawer_status', flag)
+    }    
   },
   getters: {
     drawer_status(state) {
+      console.log("drawer: " + state.drawer_status)
       return state.drawer_status
     }
   }

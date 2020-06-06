@@ -26,18 +26,15 @@ const users_module = {
         })
         .catch(error => console.log(error))
     },
-    action_add_user(context, state) {
-      if (!state.new_user) {
-        return
-      }
-      const user = {
-        id: 333,
-        name: "Marco",
-        email: "ozeta86@gmail.com"
-      }
-      axios.post("/users", user).then(() => {
-          context.commit('ADD_USER', user)
-        })
+    action_add_user({ commit, state }, user) {
+      console.log("%cAction: add user", "font-weight: bold;color:white; background: blue")
+
+      commit('ADD_USER', user)
+      console.log(state)
+      console.log("user:" +  user.firstname)
+      // axios.post("/users", user).then(() => {
+      //     context.commit('ADD_USER', user)
+      //   })
     }
   },
   getters: {

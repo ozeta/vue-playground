@@ -6,7 +6,7 @@ npm -v
 mkdir vue-npm && cd vue-npm
 npm init -y
 npm install vue --save
-npm install -g @vue/cli @vue/cli-service-global
+npm install -g @vue/cli @vue/cli-service-global vue-click-outside
 vue create vuetify-test (requires manual actions)
 cd vuetify-test
 vue add vuetify

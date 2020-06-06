@@ -56,8 +56,14 @@ export default {
       action_load_users: "users_module/action_load_users"
     })
   },
-  created() {
-    this.$store.dispatch("users_module/action_load_users");
+  // created() {
+  //   this.$store.dispatch("users_module/action_load_users");
+  // },
+
+  created: {
+    ...mapGetters({
+      getter_filter_users: "users_module/filtered_users"
+    }),    
   },
   computed: {
     ...mapGetters({
